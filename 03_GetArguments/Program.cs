@@ -2,11 +2,18 @@
 {
     private static void Main(string[] args)
     {
-        foreach(var arg in args)
+        Console.WriteLine("Кількість аргументів: " + args.Length);
+        foreach (var item in args)
         {
-            Console.WriteLine(arg);
+            Console.WriteLine(item);
+            Console.WriteLine(item[0] + item[1]);
         }
         Console.ReadKey();
+
+
+
+
+
 
     }
 }
