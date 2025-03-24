@@ -26,5 +26,11 @@ namespace _02_TaskManager
         {
             grid.ItemsSource = Process.GetProcesses();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+           
+
+        }
     }
 }

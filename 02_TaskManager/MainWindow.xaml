@@ -9,15 +9,17 @@
     <DockPanel>
         <ToolBar DockPanel.Dock="Top">
             <Button Click="Click">Refresh</Button>
+            <Button Click="Button_Click">Kill</Button>
+
         </ToolBar>
         <DataGrid Name="grid" AutoGenerateColumns="True" IsReadOnly="True" >
-            <!--<DataGrid.Columns>
+            <DataGrid.Columns>
             <DataGridTextColumn Header="Process Name" Binding="{Binding ProcessName}" />
             <DataGridTextColumn Header="PID" Binding="{Binding Id}" />
             <DataGridTextColumn Header="Total Processor Time" Binding="{Binding TotalProcessorTime}" />
             <DataGridTextColumn Header="Priority" Binding="{Binding PriorityClass}" />
             <DataGridTextColumn Header="User Name" Binding="{Binding UserName}" />
-            </DataGrid.Columns>-->
+            </DataGrid.Columns>
 
         </DataGrid>
     </DockPanel>
