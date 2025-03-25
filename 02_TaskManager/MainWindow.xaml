@@ -8,8 +8,17 @@
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
         <ToolBar DockPanel.Dock="Top">
-            <Button Click="Click">Refresh</Button>
-            <Button Click="Button_Click">Kill</Button>
+            <Button Click="Refresh" Height="41">Refresh</Button>
+            <StackPanel>
+                <RadioButton GroupName="group1" Click="RadioButton_Click">1</RadioButton>
+                <RadioButton GroupName="group1" Click="RadioButton_Click" Width="41">2</RadioButton>
+                <RadioButton GroupName="group1" Click="RadioButton_Click">5</RadioButton>
+            </StackPanel>
+
+            <Button Click="Button_Click" Width="78" Height="35">Kill</Button>
+            <Button Click="ShowDetails" Width="78" Height="35">ShowDetail</Button>
+            <TextBox Name="TextBoox" KeyDown="TextBox_KeyDown" Width="250"></TextBox>
+
 
         </ToolBar>
         <DataGrid Name="grid" AutoGenerateColumns="True" IsReadOnly="True" >
