@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04_classWork", "04_classWor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "00_Args", "00_Args\00_Args.csproj", "{5EB99B64-6AA4-4313-96AF-F66EDEF6A047}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_thread_example_app", "05_thread_example_app\05_thread_example_app.csproj", "{DA7538EA-4AF1-47AA-80BC-E9261BF1FA61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05_thread_example_app", "05_thread_example_app\05_thread_example_app.csproj", "{DA7538EA-4AF1-47AA-80BC-E9261BF1FA61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_Class_thread", "06_Class_thread\06_Class_thread.csproj", "{92DB0B79-21B6-46CD-8BCF-5DB43B075661}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06_Class_thread", "06_Class_thread\06_Class_thread.csproj", "{92DB0B79-21B6-46CD-8BCF-5DB43B075661}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_classmonitor", "07_classmonitor\07_classmonitor.csproj", "{D3487F90-ACDD-48E4-B335-ECC3C7AC8980}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{92DB0B79-21B6-46CD-8BCF-5DB43B075661}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92DB0B79-21B6-46CD-8BCF-5DB43B075661}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92DB0B79-21B6-46CD-8BCF-5DB43B075661}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3487F90-ACDD-48E4-B335-ECC3C7AC8980}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3487F90-ACDD-48E4-B335-ECC3C7AC8980}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3487F90-ACDD-48E4-B335-ECC3C7AC8980}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3487F90-ACDD-48E4-B335-ECC3C7AC8980}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
