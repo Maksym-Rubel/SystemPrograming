@@ -1,0 +1,17 @@
+﻿<Window x:Class="_12_classAsync.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_12_classAsync"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top">
+            <Button Click="Button_Click" Margin="10" Padding="10"> Generate </Button>
+        </ToolBar>
+        <ProgressBar DockPanel.Dock="Bottom" IsIndeterminate="True" Height="20"></ProgressBar>
+        <ListBox Name ="list"></ListBox>
+        
+    </DockPanel>
+</Window>
