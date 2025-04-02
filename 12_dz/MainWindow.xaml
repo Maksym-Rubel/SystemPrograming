@@ -9,8 +9,8 @@
     <DockPanel>
         <ToolBar DockPanel.Dock="Top">
             <Button Click="Button_Click" Margin="10" Padding="10">Generate</Button>
-            <TextBox Name="tb1" Width="300" Height="20">C:\Users\Maksym\source\repos\01_processes\12_dz\bin\Debug\net8.0-windows\ForCopy.txt</TextBox>
-            <TextBox Name="tb2" Width="300" Height="20">C:\Users\Maksym\source\repos\01_processes\12_dz\bin\Debug\net8.0-windows\Copy</TextBox>
+            <TextBox Name="tb1" Width="300" Height="20"></TextBox>
+            <TextBox Name="tb2" Width="300" Height="20"></TextBox>
             <TextBox Name="tb3" Width="40" Height="20"></TextBox>
 
 
