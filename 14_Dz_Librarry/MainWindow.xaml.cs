@@ -29,6 +29,7 @@ namespace _14_Dz_Librarry
         public MainWindow()
         {
             InitializeComponent();
+            ReturnAuthorsAsyns();
         }
 
         private async void Search_Btn(object sender, RoutedEventArgs e)
@@ -122,6 +123,10 @@ namespace _14_Dz_Librarry
             });
         }
 
+        private async void ReturnAuthorsAsyns()
+        {
+            await ReturnAuthors();
+        }
         private Task ReturnAuthors()
         {
             return Task.Run(() =>
