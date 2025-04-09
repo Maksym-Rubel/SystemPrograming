@@ -5,9 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_14_classasync"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        d:DataContext="{d:DesignInstance local:ViewModel, IsDesignTimeCreatable=True}"
+        Title="MainWindow" Height="450" Width="800"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
     <Window.Resources>
-        <Style TargetType="{x:Type Button}">
+        <!--<Style TargetType="{x:Type Button}">
             <Setter Property="Margin" Value="5"></Setter>
             <Setter Property="Padding" Value="5"></Setter>
             <Setter Property="FontWeight" Value="Bold"></Setter>
@@ -20,10 +29,10 @@
             <Setter Property="Margin" Value="5"></Setter>
             <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
 
-        </Style>
+        </Style>-->
         
     </Window.Resources>
-    <DockPanel LastChildFill="False">
+    <DockPanel LastChildFill="True">
         <Grid DockPanel.Dock="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"></ColumnDefinition>
@@ -36,16 +45,48 @@
             </Grid.RowDefinitions>
 
             <Label VerticalAlignment="Center">From:</Label>
-            <TextBox Name="srcTextBox" Grid.Column="1" Style="{StaticResource pathBox}"></TextBox>
-            <Button Click="OpenFileBtn" Grid.Column="2" Margin="5" Padding="5">Browse</Button>
+            <TextBox Name="srcTextBox" Grid.Column="1"></TextBox>
+            <Button Click="OpenFileBtn" Grid.Column="2" Margin="5" Padding="5" 
+            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+            Style="{StaticResource MaterialDesignRaisedSecondaryLightButton}"
+            ToolTip="Resource name: MaterialDesignRaisedSecondaryLightButton">Browse</Button>
             
             <Label Grid.Row="1" VerticalAlignment="Center">To:</Label>
-            <TextBox Name="destTextBox" Grid.Row="1" Grid.Column="1" Style="{StaticResource pathBox}"></TextBox>
+            <TextBox Name="destTextBox" Grid.Row="1" Grid.Column="1" ></TextBox>
             <Button Click="OpenFolderBtn" Grid.Row="1" Grid.Column="2" Margin="5" Padding="5">Browse</Button>
         </Grid>
         <Button Click="CopyFile" DockPanel.Dock="Top">Copy</Button>
-        <ProgressBar Name ="progress" DockPanel.Dock="Bottom" IsIndeterminate="False" Height="30"></ProgressBar>
-        <TextBlock DockPanel.Dock="Bottom" HorizontalAlignment="Center" Name ="percentage_"></TextBlock>
+        <ProgressBar Name ="progress" DockPanel.Dock="Bottom" IsIndeterminate="{Binding IsWaiting}" Height="30"></ProgressBar>
+        <ListBox HorizontalContentAlignment="Stretch" ItemsSource="{Binding Processes}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+
+                        </Grid.ColumnDefinitions>
+                        <TextBlock FontWeight="Bold" Margin="20,0" Text="{Binding FileName}"></TextBlock>
+
+                        <TextBlock Grid.Column="1" FontWeight="Bold" Margin="20,0">Spped: <Run Text="{Binding MegaBytesPerSeconds, Mode=OneWay}"></Run>Mb/s</TextBlock>
+                        <ProgressBar Grid.Column="2" Height="10" Margin="5" Value="{Binding Percentage}"></ProgressBar>
+                        <TextBlock Grid.Column="3" FontWeight="Bold" Margin="20,0"><Run Text="{Binding PercentageInt,Mode=OneWay}"></Run>%</TextBlock>
+
+                    </Grid>
+                </DataTemplate>
+                
+                
+                
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button
+  Width="{StaticResource ButtonWidth}"
+  Content="_LIGHT"
+  IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+  Style="{StaticResource MaterialDesignRaisedLightButton}"
+  ToolTip="Resource name: MaterialDesignRaisedLightButton" />
     </DockPanel>
     
 </Window>
