@@ -1,0 +1,79 @@
+﻿<Window x:Class="_17_HomeWork.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_17_HomeWork"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel LastChildFill="True">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="53.5"></ColumnDefinition>
+                <ColumnDefinition Width="146.5"/>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+
+            <TextBox Grid.Row="0" Margin="10,10,10,10" Grid.ColumnSpan="4" Grid.Column="0" Name="srcTextBox"></TextBox>
+            <Button Grid.Row="0" Grid.Column="4" Height="50" Click="Browse_Btn"  >Browse file</Button>
+            <TextBox Grid.Row="1" Margin="10,10,10,10" Grid.ColumnSpan="4" Grid.Column="0" Name="frcTextBox"></TextBox>
+            <Button Grid.Row="1" Grid.Column="4" Height="50" Click="Browse_FLR_Btn"  >Browse folder</Button>
+            <Button Grid.Row="2"  Height="50" Grid.ColumnSpan="5" Click="Start_Btn">Start</Button>
+
+
+
+            <Button Grid.Row="3" Grid.Column="0" Height="25" Width="200" Click="MExpir_Btn">Most Expirience</Button>
+            <Button Grid.Row="3" Grid.Column="1" Height="25" Width="200" Click="LExp_Btn" Grid.ColumnSpan="2">Less Expirience</Button>
+            <Button Grid.Row="3" Grid.Column="3" Height="25" Width="200" Click="OrdCountrt_Btn">Country Order</Button>
+            <Button Grid.Row="3" Grid.Column="4" Height="25" Width="100" Click="LSal_Btn" HorizontalAlignment="Left" >Less salary</Button>
+            <Button Grid.Row="3" Grid.Column="4" Height="25" Width="100" Click="MSal_Btn" HorizontalAlignment="Left" Margin="100,0,0,0" >Most salary</Button>
+
+
+
+            <ListBox Name="lb1" Grid.ColumnSpan="5" Grid.Row="4" HorizontalContentAlignment="Stretch" >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="130"/>
+                                <ColumnDefinition Width="130"/>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="130"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="130"/>
+
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Margin="5,0" Text="{Binding Name}"/>
+                            <TextBlock Grid.Column="1" Margin="5,0" Text="{Binding Surname}"/>
+                            <TextBlock Grid.Column="2" Margin="5,0" Text="{Binding Age}"/>
+                            <TextBlock Grid.Column="3" Margin="5,0" Text="{Binding Country}"/>
+                            <TextBlock Grid.Column="4" Margin="5,0" Text="{Binding ExpriencYear}"/>
+                            <TextBlock Grid.Column="5" Margin="5,0" Text="{Binding Salary}"/>
+
+
+                        </Grid>
+                    </DataTemplate>
+
+
+
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+        </Grid>
+    </DockPanel>
+
+</Window>
