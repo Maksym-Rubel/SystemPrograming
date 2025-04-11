@@ -20,7 +20,7 @@
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"></RowDefinition>
-                <RowDefinition Height="Auto"></RowDefinition>
+                
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
 
@@ -29,22 +29,21 @@
 
 
             <TextBox Grid.Row="0" Margin="10,10,10,10" Grid.ColumnSpan="4" Grid.Column="0" Name="srcTextBox"></TextBox>
-            <Button Grid.Row="0" Grid.Column="4" Height="50" Click="Browse_Btn"  >Browse file</Button>
-            <TextBox Grid.Row="1" Margin="10,10,10,10" Grid.ColumnSpan="4" Grid.Column="0" Name="frcTextBox"></TextBox>
-            <Button Grid.Row="1" Grid.Column="4" Height="50" Click="Browse_FLR_Btn"  >Browse folder</Button>
-            <Button Grid.Row="2"  Height="50" Grid.ColumnSpan="5" Click="Start_Btn">Start</Button>
+            <Button Grid.Row="0" Grid.Column="4" Height="50" Width="100" Click="Browse_Btn" HorizontalAlignment="Left" >Browse file</Button>
+            <Button Grid.Row="0" Grid.Column="4" Height="50" Width="100" Click="Browse_FLR_Btn" HorizontalAlignment="Right" >Browse folder</Button>
+            <Button Grid.Row="1"  Height="50" Grid.ColumnSpan="5" Click="Start_Btn">Start</Button>
 
 
 
-            <Button Grid.Row="3" Grid.Column="0" Height="25" Width="200" Click="MExpir_Btn">Most Expirience</Button>
-            <Button Grid.Row="3" Grid.Column="1" Height="25" Width="200" Click="LExp_Btn" Grid.ColumnSpan="2">Less Expirience</Button>
-            <Button Grid.Row="3" Grid.Column="3" Height="25" Width="200" Click="OrdCountrt_Btn">Country Order</Button>
-            <Button Grid.Row="3" Grid.Column="4" Height="25" Width="100" Click="LSal_Btn" HorizontalAlignment="Left" >Less salary</Button>
-            <Button Grid.Row="3" Grid.Column="4" Height="25" Width="100" Click="MSal_Btn" HorizontalAlignment="Left" Margin="100,0,0,0" >Most salary</Button>
+            <Button Grid.Row="2" Grid.Column="0" Height="25" Width="200" Click="MExpir_Btn">Most Expirience</Button>
+            <Button Grid.Row="2" Grid.Column="1" Height="25" Width="200" Click="LExp_Btn" Grid.ColumnSpan="2">Less Expirience</Button>
+            <Button Grid.Row="2" Grid.Column="3" Height="25" Width="200" Click="OrdCountrt_Btn">Country Order</Button>
+            <Button Grid.Row="2" Grid.Column="4" Height="25" Width="100" Click="LSal_Btn" HorizontalAlignment="Left" >Less salary</Button>
+            <Button Grid.Row="2" Grid.Column="4" Height="25" Width="100" Click="MSal_Btn" HorizontalAlignment="Left" Margin="100,0,0,0" >Most salary</Button>
 
 
 
-            <ListBox Name="lb1" Grid.ColumnSpan="5" Grid.Row="4" HorizontalContentAlignment="Stretch" >
+            <ListBox Name="lb1" Grid.ColumnSpan="5" Grid.Row="3" HorizontalContentAlignment="Stretch" >
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid>
