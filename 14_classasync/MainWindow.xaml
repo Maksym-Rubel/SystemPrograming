@@ -57,7 +57,7 @@
         </Grid>
         <Button Click="CopyFile" DockPanel.Dock="Top">Copy</Button>
         <ProgressBar Name ="progress" DockPanel.Dock="Bottom" IsIndeterminate="{Binding IsWaiting}" Height="30"></ProgressBar>
-        <ListBox HorizontalContentAlignment="Stretch" ItemsSource="{Binding Processes}">
+        <ListBox HorizontalContentAlignment="Stretch" ItemsSource="{Binding model}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>

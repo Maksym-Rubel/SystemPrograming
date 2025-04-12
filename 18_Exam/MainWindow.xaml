@@ -1,0 +1,57 @@
+﻿<Window x:Class="_18_Exam.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_18_Exam"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+
+
+            </Grid.RowDefinitions>
+
+            <TextBox Grid.Row="0" Margin="10" Grid.Column="0" Name="srcTextBox" VerticalContentAlignment="Center"></TextBox>
+            <Button Grid.Row="0"  Margin="10" Grid.Column="1" Height="50" Width="150" Click="Browse_Btn" HorizontalAlignment="Left" >Browse</Button>
+            <TextBox Grid.Row="1" Margin="10" Grid.Column="0" Name="WordTectBox" VerticalContentAlignment="Center"></TextBox>
+            <Button Grid.Row="1"  Margin="10" Grid.Column="1" Height="30" Width="150" Click="Save_Btn" HorizontalAlignment="Left" >Save</Button>
+
+            <Button Grid.Row="2"  Margin="10" Grid.ColumnSpan="2" Height="50"  Click="Start_Btn" >Start</Button>
+            <ListBox Name ="lb1"  HorizontalContentAlignment="Stretch" Grid.Row="3" Grid.ColumnSpan="2">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock MinWidth="300" FontWeight="Bold" Margin="20,0" Grid.Column="0" Text="{Binding fileName}"/>
+                            <TextBlock MinWidth="300" FontWeight="Bold" Margin="20,0" Grid.Column="1" Text="{Binding filePath}"/>
+                            <TextBlock MinWidth="300" FontWeight="Bold" Margin="20,0" Grid.Column="2" Text="{Binding countWord}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+
+            <ProgressBar Grid.ColumnSpan="2" Grid.Row="4" Height="20" Margin="5" Value="{Binding Progress}"></ProgressBar>
+
+        </Grid>
+    </DockPanel>
+    
+</Window>

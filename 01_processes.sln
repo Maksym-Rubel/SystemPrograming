@@ -39,9 +39,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14_Dz_Librarry", "14_Dz_Lib
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "16_class", "16_class\16_class.csproj", "{5F428999-A714-4BEA-9685-CEB500904FD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17_HomeWork_AsyncAwait", "17_HomeWork_AsyncAwait\17_HomeWork_AsyncAwait.csproj", "{41AC52F8-055D-4D9C-BF46-3417F8AE8E13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "17_HomeWork_AsyncAwait", "17_HomeWork_AsyncAwait\17_HomeWork_AsyncAwait.csproj", "{41AC52F8-055D-4D9C-BF46-3417F8AE8E13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17_HomeWork", "17_HomeWork\17_HomeWork.csproj", "{A10D16DD-64B9-403E-82D7-8880B3C430A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "17_HomeWork", "17_HomeWork\17_HomeWork.csproj", "{A10D16DD-64B9-403E-82D7-8880B3C430A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18_Exam", "18_Exam\18_Exam.csproj", "{2B87E45E-77A3-4290-A21C-C4EC7303DA27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +131,10 @@ Global
 		{A10D16DD-64B9-403E-82D7-8880B3C430A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A10D16DD-64B9-403E-82D7-8880B3C430A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A10D16DD-64B9-403E-82D7-8880B3C430A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B87E45E-77A3-4290-A21C-C4EC7303DA27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B87E45E-77A3-4290-A21C-C4EC7303DA27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B87E45E-77A3-4290-A21C-C4EC7303DA27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B87E45E-77A3-4290-A21C-C4EC7303DA27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
